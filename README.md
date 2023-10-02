@@ -21,10 +21,10 @@ Google Chrome is recommended for web scraping. If another browser is used, pleas
 
 ## School List Web Scraping Script
 ### Coding Notes
-The webpage will sometimes load a table in the `tables[0]` object that is an ad for a game being played that current week. If you run into issues with the script, you can investigate the output of cell 3 to verify you are calling the correct table. The table reference can be changed in the following block of code:
+The webpage will sometimes load a table in the `tables` object that is an ad for a game being played that current week and there is no pattern for how many will display. If you run into issues with the script, you can investigate the output of cell 3 to verify you are calling the correct table or you can call the last object in the list:
 
 ```
-for row in tables[1].find_all('tr'):
+for row in tables[-1].find_all('tr'):
 ```
 
 The output is a .csv file with school names and the URL link to be used in the next script. If you are having issues with the above section of code, a version of the .csv file is already in the resources directory.
