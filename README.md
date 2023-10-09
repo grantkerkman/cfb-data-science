@@ -15,6 +15,7 @@ The script utilizes the following libraries:
 * BeautifulSoup - [BeautifulSoup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 * pandas - [pandas Documentation](https://pandas.pydata.org/)
 * NumPy - [NumPy Documentation](https://numpy.org/)
+* SQLite - [SQLite Documentation](https://www.sqlite.org/docs.html)
 
 ## Other Requirements
 Google Chrome is recommended for web scraping. If another browser is used, please remember to import the appropriate dependencies in the first cell.
@@ -39,3 +40,9 @@ Cell 3 inputs currently require the full school name with the start of each word
 * Texas A&M
 
 Cell 6 generates data for offensive stats, and Cell 7 generates data for defensive stats.
+
+## Data Transform & Loading
+### Coding Notes
+The script takes the output csv file from the resources directory and cleans the data for database loading.  The webscrape inserted additional blank rows of data and also included some bowl games with no statistics.  The record needed to be broken apart into individual integers for the score and a string for either a W/L.  This will allow for charting and statistical operations on records.  
+
+The cleaned data is loaded into a SQLite database with an offense and defense table.  For the scope of the project right now, it is sufficient to perform data analysis with .csv files.  The SQLite database creation will become more important once the script is expanded to include multiple teams in the database.
