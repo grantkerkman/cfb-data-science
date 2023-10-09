@@ -1,4 +1,4 @@
-# Web Scraping College Football Statistics
+# College Football Analytics
 
 ## Introduction
 College football fans, rejoice! Or sob uncontrollably? No matter your disposition or current mental health state, sports statistics provide abundant opportunities for data nerds to get lost in the numbers. And sometimes it's an added benefit (or curse!) if it's the team you happen to support.
