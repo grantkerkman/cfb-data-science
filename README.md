@@ -23,21 +23,12 @@ Google Chrome is recommended for web scraping. If another browser is used, pleas
 ## Coding and Script Notes
 ### Web Scraping Script Notes
 
-Cell 3 inputs currently require the full school name with the start of each word capitalized. For example:
+All webscraping scripts generate .csv files in the `resources` directory in addition to DataFrames.  The `school_stats_script` notebook needs user inputs for school name, initial year, and final year.  Currently, school names need to be capitalized.  Examples are below:
 * Nebraska
 * Iowa State
 * Texas A&M
 
+### ETL Notebooks Notes
 
-### ETL Notes
-Cell 2 is your reference to the school name and link. If you have modified this, please change accordingly.
+(---TO DO---)
 
-
-
-Cell 6 generates data for offensive stats, and Cell 7 generates data for defensive stats.
-
-## Data Transform & Loading
-### Coding Notes
-The script takes the output csv file from the resources directory and cleans the data for database loading.  The webscrape inserted additional blank rows of data and also included some bowl games with no statistics.  The record needed to be broken apart into individual integers for the score and a string for either a W/L.  This will allow for charting and statistical operations on records.  
-
-The cleaned data is loaded into a SQLite database with an offense and defense table.  For the scope of the project right now, it is sufficient to perform data analysis with .csv files.  The SQLite database creation will become more important once the script is expanded to include multiple teams in the database.
