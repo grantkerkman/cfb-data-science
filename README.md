@@ -1,4 +1,4 @@
-# College Football Analytics
+# College Football Data Engineering and Analytics
 
 ## Introduction
 College football fans, rejoice! Or sob uncontrollably? No matter your disposition or current mental health state, sports statistics provide abundant opportunities for data nerds to get lost in the numbers. And sometimes it's an added benefit (or curse!) if it's the team you happen to support.
@@ -29,7 +29,7 @@ The `school_stats` script should be the first stop in selecting the school and y
 ## Coding and Script Notes
 ### Web Scraping Script Notes
 
-All webscraping scripts generate .csv files in the `resources` directory in addition to DataFrames.  The `school_stats_script` notebook needs user inputs for school name, initial year, and final year.  Currently, school names need to be capitalized.  Examples are below:
+All web scraping scripts generate .csv files in the `resources` directory in addition to DataFrames.  The `school_stats_script` notebook needs user inputs for school name, initial year, and final year.  Currently, school names need to be capitalized.  Examples are below:
 * Nebraska
 * Iowa State
 * Texas A&M
@@ -38,6 +38,9 @@ All webscraping scripts generate .csv files in the `resources` directory in addi
 
 Every ETL script produces both a .csv and updates the database.  Special attention needs to be paid to the `standings_transform_loading` script, as dropping NaN columns in the incorrect order will elimate valid data.  Please follow the script in it's entirety.
 
+The data pipeline is structured as follows:
+
+![image](https://github.com/grantkerkman/cfb-data-engineering/assets/39035066/c797193b-bee7-43fc-9a9a-8968a7a7708f)
 
 ## Contribution and Collaboration
 
