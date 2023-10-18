@@ -42,6 +42,10 @@ The data pipeline is structured as follows:
 
 ![image](https://github.com/grantkerkman/cfb-data-engineering/assets/39035066/c797193b-bee7-43fc-9a9a-8968a7a7708f)
 
+## Analysis Scripts
+### SQL Script
+[[[TO DO]]]
+
 ## Contribution and Collaboration
 
 We welcome contributions and collaboration from the college football community and data enthusiasts. If you'd like to get involved in making this project even better, here's how you can contribute:
