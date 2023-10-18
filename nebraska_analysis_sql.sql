@@ -14,10 +14,6 @@ FROM nebraska_offense;
 SELECT *
 FROM standings;
 
------------------------------------
--- Analyis - Nebraska Offense
------------------------------------
-
 -- Basic Counts
 SELECT COUNT(date) AS games_played
 FROM nebraska_offense; -- 287
@@ -39,7 +35,9 @@ FROM nebraska_offense; -- 2000-09-02 00:00:00	San Jose State	W (49-13)
 SELECT Max (date), opponent, score
 FROM nebraska_offense; -- 2022-11-25 00:00:00	Iowa	W (24-17)
 
--- Top Performances
+-----------------------------------
+-- Analyis - Nebraska Offense
+-----------------------------------
 -- Top Performances (Rushing)
 SELECT date, opponent, score, rushing_yds, rushing_avg, rushing_td, points_for - points_against AS point_diff
 FROM nebraska_offense
@@ -201,3 +199,89 @@ ORDER BY SRS ASC;
 -----------------------------------------------
 -- Analyis - All Offense
 -----------------------------------------------
+-- Top Performances (Rushing Yards)
+SELECT year, school, rushing_yds, rushing_td
+FROM all_offense
+ORDER BY rushing_yds DESC
+LIMIT 10;
+
+-- Top Performances (Rushing TDs)
+SELECT year, school, rushing_yds, rushing_td
+FROM all_offense
+ORDER BY rushing_td DESC
+LIMIT 10;
+
+-- Top Performances (Passing Yards)
+SELECT year, school, passing_cmp, passing_att, passing_pct, passing_yds, passing_td
+FROM all_offense
+ORDER BY passing_yds DESC
+LIMIT 10;
+
+-- Top Performances (Passing TDs)
+SELECT year, school, passing_cmp, passing_att, passing_pct, passing_yds, passing_td
+FROM all_offense
+ORDER BY passing_td DESC
+LIMIT 10;
+
+-- Top Performances (Passing Efficiency)
+SELECT year, school, passing_cmp, passing_att, passing_pct, passing_yds, passing_td
+FROM all_offense
+ORDER BY passing_pct DESC
+LIMIT 10;
+
+-- Top Performances (Total TDs)
+SELECT year, school, rushing_td, passing_td, (rushing_td + passing_td) AS total_td
+FROM all_offense
+ORDER BY total_td DESC
+LIMIT 10;
+
+-- Top Performances (Total Yards)
+SELECT year, school, total_yds
+FROM all_offense
+ORDER BY total_yds DESC
+LIMIT 10;
+
+-----------------------------------------------
+-- Analyis - All defense
+-----------------------------------------------
+-- Top Performances (Rushing Yards)
+SELECT year, school, rushing_yds, rushing_td
+FROM all_defense
+ORDER BY rushing_yds ASC
+LIMIT 10;
+
+-- Top Performances (Rushing TDs)
+SELECT year, school, rushing_yds, rushing_td
+FROM all_defense
+ORDER BY rushing_td ASC
+LIMIT 10;
+
+-- Top Performances (Passing Yards)
+SELECT year, school, passing_cmp, passing_att, passing_pct, passing_yds, passing_td
+FROM all_defense
+ORDER BY passing_yds ASC
+LIMIT 10;
+
+-- Top Performances (Passing TDs)
+SELECT year, school, passing_cmp, passing_att, passing_pct, passing_yds, passing_td
+FROM all_defense
+ORDER BY passing_td ASC
+LIMIT 10;
+
+-- Top Performances (Passing Efficiency)
+SELECT year, school, passing_cmp, passing_att, passing_pct, passing_yds, passing_td
+FROM all_defense
+ORDER BY passing_pct ASC
+LIMIT 10;
+
+-- Top Performances (Total TDs)
+SELECT year, school, rushing_td, passing_td, (rushing_td + passing_td) AS total_td
+FROM all_defense
+ORDER BY total_td ASC
+LIMIT 10;
+
+-- Top Performances (Total Yards)
+SELECT year, school, total_yds
+FROM all_defense
+ORDER BY total_yds ASC
+LIMIT 10;
