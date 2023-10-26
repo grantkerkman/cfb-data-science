@@ -51,17 +51,17 @@ ORDER BY passing_yds DESC
 LIMIT 10;
 
 -- Top Rushing Performances Evaluating Nebraska's Defense
-SELECT nebraska_offense.date, nebraska_offense.opponent, nebraska_offense.score, nebraska_offense.rushing_yds, nebraska_defense.total_yds AS opponent_total_yards, nebraska_offense.points_for - nebraska_offense.points_against AS point_diff
-FROM nebraska_offense
-INNER JOIN nebraska_defense on nebraska_offense.date = nebraska_defense.date
-ORDER BY nebraska_offense.rushing_yds DESC
+SELECT no.date, no.opponent, no.score, no.rushing_yds, nd.total_yds AS opponent_total_yards, no.points_for - no.points_against AS point_diff
+FROM nebraska_offense AS no
+INNER JOIN nebraska_defense AS nd on no.date = nd.date
+ORDER BY no.rushing_yds DESC
 LIMIT 10;
 
 -- Top Passing Performances Evaluating Nebraska's Defense
-SELECT nebraska_offense.date, nebraska_offense.opponent, nebraska_offense.score, nebraska_offense.passing_yds, nebraska_defense.total_yds AS opponent_total_yards, nebraska_offense.points_for - nebraska_offense.points_against AS point_diff
-FROM nebraska_offense
-INNER JOIN nebraska_defense on nebraska_offense.date = nebraska_defense.date
-ORDER BY nebraska_offense.passing_yds DESC
+SELECT no.date, no.opponent, no.score, no.passing_yds, nd.total_yds AS opponent_total_yards, no.points_for - no.points_against AS point_diff
+FROM nebraska_offense AS no
+INNER JOIN nebraska_defense AS nd on no.date = nd.date
+ORDER BY no.passing_yds DESC
 LIMIT 10;
 
 -- Top Scoring Performances
