@@ -16,6 +16,7 @@ The script utilizes the following libraries:
 * pandas - [pandas Documentation](https://pandas.pydata.org/)
 * NumPy - [NumPy Documentation](https://numpy.org/)
 * SQLite - [SQLite Documentation](https://www.sqlite.org/docs.html)
+* Scikit Learn - [Scikit Learn Documentation](https://scikit-learn.org/0.21/documentation.html)
 
 ## Other Requirements
 Google Chrome is recommended for web scraping. If another browser is used, please remember to import the appropriate dependencies in the first cell.
